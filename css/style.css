@@ -138,24 +138,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-link:hover::after,
 .nav-link.active::after { width: 100%; }
 
-.btn-resume {
-  border: 1px solid var(--border);
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: var(--transition);
-  backdrop-filter: blur(10px);
-}
-.btn-resume:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #0a0a0f;
-}
-
 .hamburger {
   display: none;
   flex-direction: column;
