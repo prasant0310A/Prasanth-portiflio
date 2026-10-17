@@ -606,6 +606,70 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .cert-card p { color: var(--text-muted); font-size: 0.82rem; margin-bottom: 10px; min-height: 2.5em; }
 .cert-card span { font-size: 0.75rem; color: var(--accent-2); font-weight: 600; }
 
+/* ---------- Achievements ---------- */
+.achievements { background: var(--bg-alt); }
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.achievement-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.achievement-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 138, 61, 0.12), transparent 55%);
+  opacity: 0;
+  transition: var(--transition);
+  pointer-events: none;
+}
+.achievement-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+.achievement-card:hover::after { opacity: 1; }
+.badge-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 138, 61, 0.25), rgba(91, 140, 255, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.achievement-card h3 {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.achievement-card p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+}
+.achievement-meta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
 /* ---------- Education ---------- */
 .education { background: var(--bg-alt); }
 .education-grid {
